@@ -13,10 +13,7 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets PrintSupport)  # До�
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets PrintSupport)  # Добавлено PrintSupport
 
 set(PROJECT_SOURCES
-        widget.cpp
-        widget.h
         main.cpp
-        widget.ui
         qcustomplot.cpp
 )
 
