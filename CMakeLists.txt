@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets PrintSupport)  # Добавлено PrintSupport
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets PrintSupport)  # Добавлено PrintSupport
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets PrintSupport) 
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets PrintSupport)  
 
 set(PROJECT_SOURCES
         main.cpp
@@ -36,7 +36,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(Test_one PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport)  # Добавлено PrintSupport
+target_link_libraries(Test_one PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport) 
 
 if(${QT_VERSION} VERSION_LESS 5.15)
   set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.Test_one)
